@@ -108,7 +108,20 @@ class LinkedList {
 
     reverse() {}
 
-    indexOf(data) {}
+    indexOf(data) {
+        if(this.Arr.length>0){
+    for(var i=0; i<this.Arr.length; i++){
+           if (this.Arr[i].data==data){
+           return i;
+           }
+           }
+        if(i==this.Arr.length){
+               return -1;
+        }
+
+        }
+}
+
 }
 
 module.exports = LinkedList;
