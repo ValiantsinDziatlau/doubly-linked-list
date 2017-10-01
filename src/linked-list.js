@@ -106,7 +106,19 @@ class LinkedList {
         this.Arr.splice(index,1);
     }
 
-    reverse() {}
+    reverse() {
+    if(this.Arr.length>0){
+        this.Arr.reverse();
+    for(var i=0; i<this.Arr.length; i++){
+        var next2prev=null;
+        var prev2next=null;
+        next2prev=this.Arr[i].next;
+        prev2next=this.Arr[i].prev;
+        this.Arr[i].prev=next2prev;
+        this.Arr[i].next=prev2next;
+    }
+    }
+    }
 
     indexOf(data) {
         if(this.Arr.length>0){
@@ -118,7 +130,6 @@ class LinkedList {
         if(i==this.Arr.length){
                return -1;
         }
-
         }
 }
 
